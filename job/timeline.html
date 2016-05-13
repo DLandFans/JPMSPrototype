@@ -1,0 +1,650 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "../template.dwt" -->
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- #BeginEditable "doctitle" -->
+	<title>Copper Leaf - Phase Management System</title>
+	<!-- #EndEditable -->
+	<!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+	<!-- Copperleaf Customization -->
+	<link href="../css/copperleaf.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+</head>
+
+<body role="document">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="../images/clp_logo.png">Phase Management System</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="../dashboard.html">Home</a></li>
+        <li><a href="list.html">Jobs</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../vendor/list.html">Vendors</a></li>
+            <li><a href="../phase/list.html">Phases</a></li>
+			<li><a href="../client/list.html">Clients</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="../user/list.html">Users</a></li>
+          </ul>
+        </li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reports<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../report/report1.html">Construction Schedule Report</a></li>
+            <li><a href="../report/report2.html">Job History Report</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search" action="list.html">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Chris Cadena<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../user/edit.html">Profile</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="../index.html">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    <div class="container theme-showcase" role="main">
+<!-- #BeginEditable "body" -->
+
+    <div class="container theme-showcase" role="main">
+<div class="row">
+  <div class="panel panel-primary">
+	  <div class="panel-heading">Job - Timeline</div>
+	  <div class="panel-body">
+			<div class="col-sm-12">
+				<ul class="nav nav-tabs">
+					<li role="presentation"><a href="edit.html">Details</a></li>
+					<li role="presentation" class="active"><a href="#">Timelines</a></li>
+					<li role="presentation"><a href="history.html">History</a></li>
+				</ul>
+					<div class="row p-t-12">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingOne">
+						      <h4 class="panel-title">
+						        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						          New Pool (Clayton Pool)
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+							    <div class="panel-body">
+										<div class="col-sm-12">
+											<div class="col-sm-12 p-t-12">
+												<form class="form-horizontal" role="form">
+													<div class="form-group">
+												    <label class="col-sm-1 control-label" for="nameField">Timeline</label>
+												    <div class="col-sm-11">
+												    <input type="text" id="nameField" class="form-control" value="New Pool" placeholder="Name">
+												    </div>
+												  </div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<table class = "table table-hover">
+												  <thead>
+												    <tr>
+												       <th>Phase</th>
+												       <th>State</th>
+												       <th>Vendor</th>
+															 <th>Scheduled Date</th>
+															 <th>Prerequisites</th>
+												    </tr>
+												  </thead>
+												  <tbody>
+												    <tr>
+															<td>Permit</td>
+															<td>Complete</td>
+															<td><a href="../vendor/edit.html">CLP Internal</a></td>
+															<td>03/14/16</td>
+															<td>None</td>
+												    </tr>
+												    <tr>
+															<td>Layout</td>
+															<td>Complete</td>
+															<td><a href="../vendor/edit.html">CLP Internal</a></td>
+															<td>03/16/16</td>
+															<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Permit<br/>- <del>Pre-site Inspection</del>">Permit <b>. . .</b></a></td>
+												    </tr>
+													<tr>
+														<td>Excavation</td>
+														<td>Complete</td>
+														<td><a href="../vendor/edit.html">Affordable Bobcat</a></td>
+														<td>03/20/16</td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Layout">Layout</b></a></td>
+													</tr>
+													<tr>
+														<td>Plumbing</td>
+														<td>Complete</td>
+														<td><a href="../vendor/edit.html">Leak Free Pool Plumbers</a></td>
+														<td>03/24/16</td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Excavation">Excavation</a></td>
+													</tr>
+													<tr>
+														<td>Steel</td>
+														<td>Complete</td>
+														<td><a href="../vendor/edit.html">The ReBar Guys</a></td>
+														<td>03/26/16</td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Excavation">Excavation</a></td>
+													</tr>
+													<tr>
+														<td>Electrical</td>
+														<td>Complete</td>
+														<td><a href="../vendor/edit.html">Zippy Electrical</a></td>
+														<td>03/27/16</td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Steel">Steel</a></td>
+													</tr>
+													<tr>
+														<td>Inspection Electrical</td>
+														<td>Complete</td>
+														<td><a href="../vendor/edit.html">City of Chandler</a></td>
+														<td>04/03/16</td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Electrical">Electrical</a></td>
+													</tr>
+													<tr>
+														<td>Shotcrete</td>
+														<td>Complete</td>
+														<td><a href="../vendor/edit.html">SuperCRETE</a></td>
+														<td>04/14/16</td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Inspection Electrical">Inspection Electrical</a></td>
+													</tr>
+													<tr>
+														<td>Waterline Tile</td>
+														<td>Complete</td>
+														<td><a href="../vendor/edit.html">Accent Tilers</a></td>
+														<td>04/28/16</td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Shotcrete">Shotcrete</a></td>
+													</tr>
+													<tr>
+														<td>Coping</td>
+														<td><a href="#" data-toggle="modal" data-target="#phaseScheduledChangeModal">Scheduled</a></td>
+														<td><a href="../vendor/edit.html">Lone Star Landscaping</a></td>
+														<td>05/02/16</td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Shotcrete<br/>- Fountain<br/>- Water Fall">Shotcrete <b>. . .</b></a></td>
+													</tr>
+													<tr>
+														<td>Deck</td>
+														<td><a href="#" data-toggle="modal" data-target="#phaseReadyScheduleChangeModal">Ready to Schedule</a></td>
+														<td><a href="../vendor/edit.html">Lone Star Landscaping</a></td>
+														<td></td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Coping<br/>- Shotcrete">Coping <b>. . .</b></a></td>
+													</tr>
+													<tr>
+														<td>Clean Up Shell</td>
+														<td><a href="#" data-toggle="modal" data-target="#phaseReadyVendorChangeModal">Ready for Vendor</a></td>
+														<td></td>
+														<td></td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Waterline Tile<br/>- Coping<br/>- Deck">Waterline Tile <b>. . .</b></a></td>
+													</tr>
+													<tr>
+														<td>Barrier</td>
+														<td><a href="#" data-toggle="modal" data-target="#phaseOnHoldChangeModal">On Hold</a></td>
+														<td></td>
+														<td></td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Clean Up Shell<br/>- Coping<br/>- Deck">Clean Up Shell <b>. . .</b></a></td>
+													</tr>
+													<tr>
+														<td>Inspection Barrier</td>
+														<td><a href="#" data-toggle="modal" data-target="#phaseOnHoldChangeModal">On Hold</a></td>
+														<td></td>
+														<td></td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Barrier">Barrier</a></td>
+													</tr>
+													<tr>
+														<td>PebbleTec</td>
+														<td><a href="#" data-toggle="modal" data-target="#phaseOnHoldChangeModal">On Hold</a></td>
+														<td></td>
+														<td></td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Inspection Barrier">Inspection Barrier</a></td>
+													</tr>
+													<tr>
+														<td>Acid Wash</td>
+														<td><a href="#" data-toggle="modal" data-target="#phaseOnHoldChangeModal">On Hold</a></td>
+														<td></td>
+														<td></td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- PebbleTec">PebbleTec</a></td>
+													</tr>
+													<tr>
+														<td>Start Up</td>
+														<td><a href="#" data-toggle="modal" data-target="#phaseOnHoldChangeModal">On Hold</a></td>
+														<td></td>
+														<td></td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Acid Wash<br/>- Plaster<br/>- Automation Programming">Acid Wash <b>. . .</b></a></td>
+													</tr>
+													<tr>
+														<td>Final Walk Through</td>
+														<td><a href="#" data-toggle="modal" data-target="#phaseOnHoldChangeModal">On Hold</a></td>
+														<td></td>
+														<td></td>
+														<td><a href="javascript:void(0)" data-toggle="popover" data-trigger="focus" title="Prerequisites:" data-html="true" data-content="- Start Up">Start Up</a></td>
+													</tr>
+												  </tbody>
+												</table>
+												<div class="row">
+													<div class="col-sm-12">
+														<a role="button" data-toggle="modal" data-target="#phaseModal" class="btn btn-info btn-xs">
+															Add Phase
+														</a>
+														<!--<a role="button" data-toggle="modal" data-target="#phaseRemoveModal" class="btn btn-info btn-xs">
+															Remove Phase
+														</a>-->
+														<a href="list.html" role="button" class="btn btn-info btn-xs">
+															Build New Timeline
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				 <div class="col-sm-offset-2 col-sm-10">
+              <div class="pull-right">
+                <a href="list.html" class="btn btn-default">Cancel</a>
+                <a href="list.html" class="btn btn-primary">Save</a>
+              </div>
+            </div>
+			</div>
+	  </div>
+	</div>
+</div>
+
+<div id="phaseModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Phase</h4>
+      </div>
+      <div class="modal-body">
+				<form class="form-horizontal" role="form">
+					<div class="row p-t-12">
+						<div class="col-sm-12">
+						  <div class="form-group">
+						    <label class="col-sm-2 control-label" for="phaseField5">Phase</label>
+						    <div class="col-sm-10">
+									<select class="form-control">
+										<option selected="selected">Permit</option>
+										<option>Pre-site Inspection</option>
+										<option>Layout</option>
+										<option>Excavation</option>
+										<option>Plumbing</option>
+										<option>Steel</option>
+										<option>Electrical</option>
+										<option>Inspection Electrical</option>
+										<option>Shotcrete</option>
+										<option>Fountain</option>
+										<option>Water Fall</option>
+										<option>Waterline Tile</option>
+										<option>Coping</option>
+										<option>Deck</option>
+										<option>Landscape On-Site</option>
+										<option>Clean Up Shell</option>
+										<option>Barrier</option>
+										<option>Inspection Barrier</option>
+										<option>Pebble Tec</option>
+										<option>Plaster</option>
+										<option>Acid Wash</option>
+										<option>Automation Programming</option>
+										<option>Start Up</option>
+										<option>Final Walk Through</option>
+									</select>
+						    </div>
+						  </div>
+		          <div class="form-group">
+		            <label class="col-sm-2 control-label" for="textinput">State</label>
+		            <div class="col-sm-10">
+									<select class="form-control" disabled>
+									  <option selected="selected">On Hold</option>
+									  <option>Unused</option>
+									  <option>Ready for Vendor</option>
+									  <option>Ready to Schedule</option>
+									  <option>Scheduled</option>
+										<option>Complete</option>
+										<option>Cancelled</option>
+									</select>
+		            </div>
+		          </div>
+							<!--<div class="form-group">
+						    <label class="col-sm-2 control-label" for="phaseField1">Vendor</label>
+						    <div class="col-sm-10">
+									<div class="input-group">
+								    <input type="text" id="phaseField0" class="form-control" title="This is an auto complete field." placeholder="Vendor"  aria-describedby="basic-addon1" value="CLP Internal" />
+										<span class="input-group-btn">
+							        <a class="btn btn-default glyphicon glyphicon-plus-sign"></a>
+							      </span>
+									</div>
+						    </div>
+						  </div>-->
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="phaseField5">Vendor</label>
+								<div class="col-sm-10">
+									<select class="form-control" disabled>
+										<option selected="selected">Choose a Vendor</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="phaseField5">Scheduled</label>
+								<div class="col-sm-10">
+									<div class="input-group">
+										<input disabled type="text" id="phaseField1" class="form-control" placeholder="Schedule Date"  aria-describedby="basic-addon1" value="" />
+										<span class="input-group-btn">
+							        <button class="btn btn-default glyphicon glyphicon-calendar" type="button"></button>
+							      </span>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+	      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<div id="phaseScheduledChangeModal" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Change Phase State</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row p-t-12">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="phaseField5">Phase</label>
+										<div class="col-sm-10">
+											<select class="form-control" disabled>
+												<option selected="selected">Coping</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="textinput">State</label>
+										<div class="col-sm-10">
+											<select class="form-control">
+												<option>Ready for Vendor</option>
+												<option>Ready to Schedule</option>
+												<option selected="selected">Complete</option>
+												<option>Cancelled</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="phaseField5">Vendor</label>
+										<div class="col-sm-10">
+											<select class="form-control" disabled>
+												<option selected="selected">Lone Star Landscaping</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="phaseField5">Scheduled</label>
+										<div class="col-sm-10">
+											<div class="input-group">
+												<input disabled type="text" id="phaseField2" class="form-control" placeholder="Schedule Date"  aria-describedby="basic-addon1" value="05/02/2016" />
+										<span class="input-group-btn">
+							        <button class="btn btn-default glyphicon glyphicon-calendar" type="button"></button>
+							      </span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="phaseReadyScheduleChangeModal" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Change Phase State</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row p-t-12">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="phaseField5">Phase</label>
+										<div class="col-sm-10">
+											<select class="form-control" disabled>
+												<option selected="selected">Deck</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="textinput">State</label>
+										<div class="col-sm-10">
+											<select class="form-control">
+												<option>Ready for Vendor</option>
+												<option selected="selected">Ready to Schedule</option>
+												<option>Cancelled</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="phaseField5">Vendor</label>
+										<div class="col-sm-10">
+											<select class="form-control" disabled>
+												<option selected="selected">Lone Star Landscaping</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="phaseField5">Scheduled</label>
+										<div class="col-sm-10">
+											<div class="input-group">
+												<input type="text" id="phaseField3" class="form-control" placeholder="Schedule Date"  aria-describedby="basic-addon1" value="" />
+										<span class="input-group-btn">
+							        <button class="btn btn-default glyphicon glyphicon-calendar" type="button"></button>
+							      </span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="phaseReadyVendorChangeModal" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Change Phase State</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row p-t-12">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="phaseField5">Phase</label>
+										<div class="col-sm-10">
+											<select class="form-control" disabled>
+												<option selected="selected">Clean Up Shell</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="textinput">State</label>
+										<div class="col-sm-10">
+											<select class="form-control">
+												<option selected="selected">Ready for Vendor</option>
+												<option>Cancelled</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="phaseField5">Vendor</label>
+										<div class="col-sm-10">
+											<select class="form-control">
+												<option selected="selected">Choose a Vendor</option>
+												<option>-----------------------------------------------------------------</option>
+												<option>Lone Star Landscaping</option>
+												<option>Premium Power Wash</option>
+												<option>Another Clean Up Company</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="phaseField5">Scheduled</label>
+										<div class="col-sm-10">
+											<div class="input-group">
+												<input disabled type="text" id="phaseField4" class="form-control" placeholder="Schedule Date"  aria-describedby="basic-addon1" value="" />
+										<span class="input-group-btn">
+							        <button class="btn btn-default glyphicon glyphicon-calendar" type="button"></button>
+							      </span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="phaseOnHoldChangeModal" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Change Phase State</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row p-t-12">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="phaseField5">Phase</label>
+										<div class="col-sm-10">
+											<select class="form-control" disabled>
+												<option selected="selected">Barrier</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="textinput">State</label>
+										<div class="col-sm-10">
+											<select class="form-control">
+												<option selected="selected">On Hold</option>
+												<option>Ready for Vendor</option>
+												<option>Unused</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="phaseField5">Vendor</label>
+										<div class="col-sm-10">
+											<select class="form-control" disabled>
+												<option selected="selected">Choose a Vendor</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="phaseField5">Scheduled</label>
+										<div class="col-sm-10">
+											<div class="input-group">
+												<input disabled type="text" id="phaseField5" class="form-control" placeholder="Schedule Date"  aria-describedby="basic-addon1" value="" />
+										<span class="input-group-btn">
+							        <button class="btn btn-default glyphicon glyphicon-calendar" type="button"></button>
+							      </span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+<!-- #EndEditable -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+</body>
+<!-- #EndTemplate -->
+</html>
